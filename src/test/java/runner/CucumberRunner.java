@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
         features = "src/test/resources/features",
         glue = {"stepDefinitions", "com/utility"},
         plugin = {"pretty", "html:target/cucumber-reports.html"},
-        tags = "@smoke"
+        tags = "@flipkart"
 )
 
 public class CucumberRunner extends AbstractTestNGCucumberTests {

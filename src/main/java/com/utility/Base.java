@@ -13,7 +13,7 @@ public class Base {
 
     //initialize objects for properties file and logger
     protected static Properties properties = new Properties();
-    protected static String propertyFilePath = "src/main/resources/properties/config.properties";
+    protected static String propertyFilePath = "src/main/resources/config.properties";
     protected static Logger logger = LogManager.getLogger();
 
     static {

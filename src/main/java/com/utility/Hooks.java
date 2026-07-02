@@ -11,6 +11,7 @@ public class Hooks extends Base{
 
     @Before()
     public void setup() {
+        logger.info("Starting WebDriver...");
         //select driver based on browser type
         String browserName = properties.getProperty("browserName");
         driver = DriverFactory.createInstance(browserName);
@@ -23,6 +24,7 @@ public class Hooks extends Base{
 
     @After
     public void tearDown() {
+        logger.info("Closing WebDriver...");
         DriverFactory.removeDriver();
     }
 
