@@ -17,7 +17,7 @@ public class Base {
     protected static Logger logger = LogManager.getLogger();
 
     static {
-        logger.info("loading properties file...");
+        logger.info("Loading properties file...");
         try (BufferedReader br = new BufferedReader(new FileReader(propertyFilePath))) {
             properties.load(br);
         } catch (IOException e) {

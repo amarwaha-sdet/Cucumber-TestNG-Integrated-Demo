@@ -14,10 +14,7 @@ Feature: Data Tables .net website validations
     Then user performs various operations using JavaScript
 
 
-  @flipkart
-  Scenario: Miscellaneous actions on Flipkart Page
-    Given user performs various actions on flipkart page
-    And user clicks on travel button
+
 
 
 

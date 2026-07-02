@@ -3,7 +3,7 @@
 <suite name="Cucumber-TestNG-Integrated-Suite">
     <test name="CucumberRunnerTest">
         <classes>
-            <class name="runner.CucumberRunner"/>
+            <class name="CucumberRunner"/>
         </classes>
     </test>
 </suite>
