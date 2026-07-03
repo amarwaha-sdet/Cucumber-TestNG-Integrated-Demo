@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.time.Duration;
+
 public class FlipkartSteps {
 
     @When("user performs various actions on flipkart page")
@@ -43,7 +45,7 @@ public class FlipkartSteps {
         JavascriptExecutor js = (JavascriptExecutor) DriverFactory.getDriver();
         js.executeScript("arguments[0].click();", travelIcon);
 
-        WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 30);
+        WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Duration.ofSeconds(30));
         By roundTripButtonLocator = By.xpath("//div[contains(text(), 'Round')]");
         wait.until(ExpectedConditions.visibilityOfElementLocated(roundTripButtonLocator));
 

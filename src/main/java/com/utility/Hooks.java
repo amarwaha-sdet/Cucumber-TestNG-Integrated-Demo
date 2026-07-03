@@ -4,6 +4,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class Hooks extends Base{
@@ -18,7 +19,7 @@ public class Hooks extends Base{
 
         //set thread-local driver
         DriverFactory.setDriver(driver);
-        DriverFactory.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         DriverFactory.getDriver().manage().window().maximize();
     }
 
