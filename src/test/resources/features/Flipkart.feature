@@ -6,5 +6,10 @@ Feature: Perform operations on Flipkart page
 
   @flipkart
   Scenario: Miscellaneous actions on Flipkart Page
-    Given user performs various actions on flipkart page
+    When user performs various actions on flipkart page
     And user clicks on travel button
+
+
+  @windowAndTabOpening
+  Scenario: Windows and Tab opening using Selenium 4 and Legacy
+    When user opens new window and tab

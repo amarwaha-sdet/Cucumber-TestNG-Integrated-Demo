@@ -14,7 +14,7 @@ public class Background extends Base {
     public void navigateToSauceHomePage() throws InterruptedException {
         DriverFactory.getDriver().get(properties.getProperty("sauceUrl"));
         Thread.sleep(1000);
-        System.out.println("Page title is: " + DriverFactory.getDriver().getTitle());
+        System.out.println("SauceLabs page title: " + DriverFactory.getDriver().getTitle());
     }
 
 
@@ -22,7 +22,7 @@ public class Background extends Base {
     public void navigateToDatTableHomePage() throws InterruptedException {
         DriverFactory.getDriver().get(properties.getProperty("dataTableUrl"));
         Thread.sleep(1000);
-        System.out.println("Page title is: " + DriverFactory.getDriver().getTitle());
+        System.out.println("DataTable.net page title: " + DriverFactory.getDriver().getTitle());
     }
 
 
@@ -30,14 +30,14 @@ public class Background extends Base {
     public void navigateToDemoQAPage() throws InterruptedException {
         DriverFactory.getDriver().get(properties.getProperty("demoQAUrl"));
         Thread.sleep(1000);
-        System.out.println("Page title is: " + DriverFactory.getDriver().getTitle());
+        System.out.println("DemoQA page title: " + DriverFactory.getDriver().getTitle());
     }
 
     @Given("user navigates to flipkart home page")
     public void navigateToFlipkartPage() throws InterruptedException {
         DriverFactory.getDriver().get(properties.getProperty("flipkartUrl"));
         Thread.sleep(1000);
-        System.out.println("Page title is: " + DriverFactory.getDriver().getTitle());
+        System.out.println("Flipkart page title: " + DriverFactory.getDriver().getTitle());
 
         //close login popup if it appears
         List<WebElement> loginForm = DriverFactory.getDriver().findElements(By.xpath("//span[@role='button']"));

@@ -4,8 +4,8 @@ target/
 !**/src/test/**/target/
 .kotlin
 
-# Ignore all log files
-*.log
+### Logs ###
+logs/application.log
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

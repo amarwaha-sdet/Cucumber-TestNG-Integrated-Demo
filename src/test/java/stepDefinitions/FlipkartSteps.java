@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.Set;
 
 public class FlipkartSteps {
 
@@ -51,6 +52,32 @@ public class FlipkartSteps {
 
         Assert.assertTrue(DriverFactory.getDriver().findElement(roundTripButtonLocator).isDisplayed());
         Thread.sleep(3000);
+    }
+
+    @When("user opens new window and tab")
+    public void openNewTabAndWindow() throws InterruptedException {
+        //legacy
+
+        //save parent window handle
+        String parentHandle = DriverFactory.getDriver().getWindowHandle();
+
+        //open new tab
+        JavascriptExecutor js = (JavascriptExecutor) DriverFactory.getDriver();
+        js.executeScript("window.open('https://edition.cnn.com/');");
+        Thread.sleep(2000);
+
+        //switch to new tab
+        Set<String> allHandles = DriverFactory.getDriver().getWindowHandles();
+
+        for (String handle : allHandles) {
+            if(!handle.equals(parentHandle)) {
+                DriverFactory.getDriver().switchTo().window(handle);
+            }
+        }
+
+        System.out.println("CNN page title: " + DriverFactory.getDriver().getTitle());
+        Thread.sleep(2000);
+
     }
 
 }
