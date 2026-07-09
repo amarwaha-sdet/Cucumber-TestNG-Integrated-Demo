@@ -13,9 +13,10 @@ public class Hooks extends Base{
     @Before()
     public void setup() {
         logger.info("Starting webdriver...");
-        //select driver based on browser type
-        String browserName = properties.getProperty("browserName");
-        driver = DriverFactory.createInstance(browserName);
+
+        //create driver instance based on passed name
+        String browser = System.getProperty("browser");
+        driver = DriverFactory.createInstance(browser);
 
         //set thread-local driver
         DriverFactory.setDriver(driver);
